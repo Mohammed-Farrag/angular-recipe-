@@ -33,7 +33,7 @@ function getResult(value){
         weather_area.textContent = `${data.weather[0].main}`;
         temp.textContent = `${data.main.temp} °C`;
         hi_low_area.textContent = `${data.main.temp_max}°C / ${data.main.temp_min}°C`
-        console.log(data);
+       
     })
 }
 
@@ -60,19 +60,7 @@ function dataBuilder(){
 
 
 function currencyRapidApi(){
-    fetch("https://currency-exchange.p.rapidapi.com/exchange?q=9.0&from=USD&to=EGP", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "currency-exchange.p.rapidapi.com",
-            "x-rapidapi-key": "57fd7df47dmsh9763b57fc2b8044p12d0d1jsn27feb42c08c3"
-        }
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+    console.info("hi");
 }
 
 currencyRapidApi();
